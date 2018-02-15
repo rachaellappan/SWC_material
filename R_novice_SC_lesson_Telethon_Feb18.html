@@ -727,12 +727,12 @@ ggplot(data = az.countries, aes(x = year, y = lifeExp, colour = continent)) +
 <p>You’re happy with the plot and you want to save it so you can put it in your paper.</p>
 <p>You can:</p>
 <pre class="r"><code># Save your most recent plot:
-ggsave(&quot;most_recent_plot.pdf&quot;)</code></pre>
+ggsave(&quot;plots/most_recent_plot.pdf&quot;)</code></pre>
 <pre><code>## Saving 7 x 5 in image</code></pre>
 <p>You can use Export from the plots window.</p>
 <p>If you’re creating lots of plots (like several, one on each page) or you’ve got something automated that creates plots so you can’t click save after each one.</p>
 <p>You can use pdf() to create a new pdf device - basically, turn on machine that makes pdfs, put things in it, then turn off machine (otherwise it’ll continue putting things in it).</p>
-<pre class="r"><code>pdf(&quot;Life_Exp_vs_time.pdf&quot;, width=12, height=4)
+<pre class="r"><code>pdf(&quot;plots/Life_Exp_vs_time.pdf&quot;, width=12, height=4)
 ggplot(data=gapminder, aes(x=year, y=lifeExp, colour=country)) +
   geom_line() +
   theme(legend.position = &quot;none&quot;)
